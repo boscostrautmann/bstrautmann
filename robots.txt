@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /old_topbosco.com/
+Disallow: /old_topbosco.com_v2/
+Sitemap: https://topbosco.com/sitemap.xml
+Allow: /
