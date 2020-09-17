@@ -1,3 +1,7 @@
+
+RewriteEngine on
+# Redirect to www from non-www
+
 # ErrorDocument location
 ErrorDocument 404 /
 ErrorDocument 500 /
@@ -8,7 +12,7 @@ ServerSignature Off
 # contrôle du cache navigateur - Expire headers
 <IfModule mod_expires.c>
 	ExpiresActive On
-	ExpiresDefault "access plus 7200 seconds"
+	ExpiresDefault "access plus 1 year"
 	ExpiresByType image/jpg 			"access plus 1 year"
 	ExpiresByType image/jpeg 			"access plus 1 year"
 	ExpiresByType image/png 			"access plus 1 year"
@@ -34,3 +38,9 @@ ServerSignature Off
 	Header always append X-Frame-Options SAMEORIGIN
 	Header set X-Content-Type-Options nosniff
 </IfModule>
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^bstrautmann\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.bstrautmann\.com$
+RewriteRule ^(.*)$ "https\:\/\/bstrautmann\.com\/$1" [R=301,L]
+

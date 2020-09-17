@@ -2024,7 +2024,6 @@ img[height] {
 .c-avatar__img {
   border-radius: 10px;
   box-shadow: 1px 1px 12px #000;
-  width: 11rem;
 }
 
 @media (min-width: 760px) {
