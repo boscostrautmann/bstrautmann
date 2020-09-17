@@ -2026,12 +2026,6 @@ img[height] {
   box-shadow: 1px 1px 12px #000;
 }
 
-@media (min-width: 760px) {
-  .c-avatar__img {
-    width: 14rem;
-  }
-}
-
 @media (min-width: 1200px) {
   .c-avatar__img {
     width: 100%;
