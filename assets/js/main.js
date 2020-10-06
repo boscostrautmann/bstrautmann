@@ -9,8 +9,26 @@ $(document).ready(function() {
         setup_progress_bar_animation();
     });
 
-});
+    function scrollToCertif(){
+        $('html, body').animate({
+            scrollTop: $(".section-certificats").offset().top
+        }, 1000);
+    }
 
+    $("#load_more a").click(function( event ) {
+        event.preventDefault();
+        scrollToCertif();
+        var link = $(this);
+        $(".d-none").toggle("slow", function() {
+            if ($(this).is(':visible')) {
+                link.text('Masquer tous les autres');
+            } else {
+                link.text('Voir tous les autres');
+            }
+        });
+    });
+
+});
 
 
 function setup_progress_bar_animation()
