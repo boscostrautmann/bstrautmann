@@ -2,7 +2,7 @@
 
 Version 2.0 de mon site web personnel et portfolio professionnel. Ce projet met en avant mes compétences techniques, mes réalisations web et mon parcours dans le domaine de l'IT.
 
-🚀 **Démo en ligne :** [bstrautmann.com](https://bstrautmann.com) *(ou met le lien GitHub Pages si applicable)*
+🚀 **Démo en ligne :** [bstrautmann.com](https://bstrautmann.com)
 
 ---
 
