@@ -1,0 +1,68 @@
+    @media (min-width: 768px) {
+      body { cursor: none; }
+      a, button, input { cursor: none; }
+    }
+
+    #custom-cursor-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #10b981;
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: width 0.2s, height 0.2s, background-color 0.2s;
+    }
+
+    #custom-cursor-ring {
+      width: 36px;
+      height: 36px;
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 9998;
+      transform: translate(-50%, -50%);
+      transition: transform 0.15s ease-out, width 0.2s, height 0.2s, border-color 0.2s;
+    }
+
+    /* THEME DARK */
+    .dark body { background-color: #141815; color: #E8ECE9; }
+    .dark .glass-card {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    .dark .grid-line { border-color: rgba(255, 255, 255, 0.08); }
+    .dark .text-subtle { color: #A3A3A3; }
+    .dark .text-title { color: #FFFFFF; }
+
+    /* THEME CLAIR AVEC TEXTES PLUS FONCÉS */
+    .light body { background-color: #F4F5F3; color: #111827; }
+    .light .glass-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05);
+    }
+    .light .grid-line { border-color: rgba(0, 0, 0, 0.12); }
+    .light .text-subtle { color: #374151; }
+    .light .text-title { color: #000000; }
+    .light .bg-text-behind { color: #000000; opacity: 0.04; }
+
+    .bg-text-behind {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: clamp(3rem, 15vw, 18rem);
+        font-weight: 900;
+        line-height: 0.8;
+        letter-spacing: -0.05em;
+        opacity: 0.05;
+        white-space: nowrap;
+        pointer-events: none;
+        user-select: none;
+        z-index: 0;
+    }

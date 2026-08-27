@@ -1,1846 +1,629 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO PRIMARY META TAGS -->
+  <title>Bosco Strautmann — Technicien Informatique & Systèmes | Genève</title>
+  <meta name="title" content="Bosco Strautmann — Technicien Informatique & Systèmes">
+  <meta name="description" content="Portfolio de Bosco Strautmann (Bosco). Technicien Informatique, Administration Systèmes & Réseaux, Développeur. Découvrez mes projets et contactez-moi.">
+  <meta name="keywords" content="Bosco Strautmann, Technicien Informatique Genève, Administration Systèmes, Support IT, JAMF, Lancy, Suisse">
+  <meta name="author" content="Bosco Strautmann">
+  <meta name="robots" content="index, follow">
 
-<html lang="fr">
+  <!-- OPEN GRAPH / LINKEDIN / FACEBOOK (Aperçus réseaux sociaux) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bstrautmann.com/">
+  <meta property="og:title" content="Bosco Strautmann — Technicien Informatique & Systèmes">
+  <meta property="og:description" content="Portfolio de Bosco Strautmann (Bosco). Découvre mes projets IT, systèmes et réseaux.">
+  <meta property="og:image" content="https://bstrautmann.com/og-image.png">
 
-    <head>
-    	<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26040175-1"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
+  <!-- TWITTER CARDS -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://bstrautmann.com/">
+  <meta property="twitter:title" content="Bosco Strautmann — Technicien Informatique & Systèmes">
+  <meta property="twitter:description" content="Portfolio de Bosco Strautmann (Bosco). Découvre mes projets IT, systèmes et réseaux.">
+  <meta property="twitter:image" content="https://bstrautmann.com/twitter-image.png">
 
-		  gtag('config', 'UA-26040175-1');
-		</script>
+  <!-- Metas iOS / PWA -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Bosco">
+  <meta name="theme-color" content="#000000">
 
-        <title>Bosco Strautmann | Web développeur &amp; Digital Marketing Expert</title>
+  <!-- CANONICAL URL -->
+  <link rel="canonical" href="https://bstrautmann.com/">
 
-        <meta name="google-site-verification" content="ZIYxhTQhMV8taV47gF8Ni7H0_vySlS_RGJ4gbUWlBO0" />
+  <!-- FAVICONS & APPLE ICONS -->
+  <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
 
-        <meta name="description" content="Bosco Strautmann | Web développeur &amp; Digital Marketing Expert basé à Genève | Curriculum vitae &amp; Portfolio">
+  <!-- SCHEMA.ORG (Google Knowledge Graph / SEO "Bosco") -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Bosco Strautmann",
+      "alternateName": ["Bosco"],
+      "url": "https://bstrautmann.com",
+      "email": "bosco@strautmann.me",
+      "jobTitle": "Technicien Informatique & Systèmes",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Genève",
+        "addressCountry": "CH"
+      },
+      "knowsAbout": [
+        "Support IT",
+        "Administration Systèmes",
+        "JAMF Pro",
+        "Cisco Meraki",
+        "Microsoft 365"
+      ],
+      "sameAs": [
+        "https://linkedin.com/in/boscostrautmann"
+      ]
+    }
+  }
+  </script>
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <!-- TAILWIND CSS & CONFIGURATION -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+            serif: ['Playfair Display', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
 
-        <link rel="canonical" href="https://bstrautmann.com/">
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
 
+  <!-- LIBRARIES (GSAP & LENIS SMOOTH SCROLL) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
 
-        <!-- Preload CSS -->
-        <link rel='preload' href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic&amp;subset=latin,latin-ext&amp;display=swap' as='style'>
-        <link rel="preload" href="assets/plugins/nivo-lightbox/nivo-lightbox.min.css" as="style">
-        <link rel="preload" href="assets/plugins/nivo-lightbox/themes/default/default.min.css" as="style">
-        <link rel="preload" href="assets/css/main.min.css" as="style">
-        <!--<link rel="preload" href="assets/css/themes.light.css" as="style">-->
-        <link rel="preload" href="assets/css/themes.dark.min.css" as="style">
-        <!--<link rel="preload" href="assets/css/custom.css" as="style">-->
+  <!-- FICHIER CSS CUSTOM -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans antialiased transition-colors duration-500 selection:bg-emerald-500 selection:text-black">
 
-        <!-- Favicon -->
-        <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicon/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon/apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicon/apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192"  href="assets/images/favicon/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
-        <link rel="manifest" href="assets/images/favicon/manifest.json">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="assets/images/favicon/ms-icon-144x144.png">
-        <meta name="theme-color" content="#ffffff">
+  <!-- 1. MESSAGE EN ARRIÈRE-PLAN (Fixé sous le site, hérite des couleurs) -->
+  <div class="fixed bottom-0 left-0 w-full text-center py-6 font-mono text-xs text-emerald-600 dark:text-emerald-400/70 -z-10 pointer-events-none select-none">
+    — Vous êtes déjà tout en bas ! —
+  </div>
 
-        <!-- Google Font: Lato -->
-        <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic&amp;subset=latin,latin-ext&amp;display=swap' rel='stylesheet' type='text/css'>
+  <!-- 2. WRAPPER PRINCIPAL OPAQUE (Masque le message et hérite de #141815 ou #F4F5F3) -->
+  <div class="relative z-10 bg-inherit min-h-screen">
 
-        <!-- Nivo Lightbox-->
-        <link rel="stylesheet" href="assets/plugins/nivo-lightbox/nivo-lightbox.min.css">
-        <link rel="stylesheet" href="assets/plugins/nivo-lightbox/themes/default/default.min.css">
+    <!-- CURSEUR -->
+    <div id="custom-cursor-dot" class="hidden md:block"></div>
+    <div id="custom-cursor-ring" class="hidden md:block"></div>
 
-        <!-- Main CSS -->
-        <link rel="stylesheet" href="assets/css/main.min.css">
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 w-full z-50 border-b grid-line glass-card px-4 md:px-6 py-4 flex justify-between items-center text-xs font-mono">
+      <div class="flex items-center gap-3">
+        <span class="relative flex h-3 w-3">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+        </span>
+        <span class="font-bold tracking-widest uppercase">BOSCO STRAUTMANN</span>
+      </div>
+
+      <div class="hidden md:flex items-center gap-6 text-subtle font-bold">
+        <span>GENÈVE, CH</span>
+        <span>•</span>
+        <span>NATIONALITÉ SUISSE</span>
+        <span>•</span>
+        <span>NÉ LE 01/06/1991</span>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <!-- BOUTON TÉLÉCHARGER CV -->
+        <a href="CV-Bosco-Strautmann.pdf" rel="noopener noreferrer" target="_blank" download class="glass-card px-4 py-2 rounded-full font-mono text-[11px] tracking-wider uppercase hover:border-emerald-500/50 transition font-bold text-title flex items-center gap-1.5">
+          CV
+        </a>
+
+        <!-- BOUTON CONTACT HEADER -->
+        <a href="#contact" class="glass-card px-4 py-2 rounded-full font-mono text-[11px] tracking-wider uppercase hover:border-emerald-500/50 transition font-bold text-title flex items-center gap-1.5">
+          CONTACT
+        </a>
+
+        <button onclick="toggleTheme()" class="glass-card px-4 py-2 rounded-full font-mono text-[11px] tracking-wider uppercase hover:border-emerald-500/50 transition font-bold">
+          <span id="theme-btn-text">SOMBRE</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="pt-[65px]">
+
+      <!-- HERO SECTION -->
+      <section class="relative min-h-[90vh] flex flex-col justify-between p-6 md:p-16 border-b grid-line overflow-hidden">
         
-        <!-- Themes -->
-        <!--<link rel="stylesheet" href="assets/css/themes.light.css">-->
-        <link rel="stylesheet" href="assets/css/themes.dark.min.css">
-        
-        <!-- Custom CSS -->
-        <!--<link rel="stylesheet" href="assets/css/custom.css">-->
+        <!-- BACKGROUND TEXT STRAUTMANN -->
+        <div class="bg-text-behind font-sans uppercase">
+          STRAUTMANN
+        </div>
 
-        <!-- jQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <!-- BANNIÈRE FUSÉE RECHERCHE D'EMPLOI -->
+        <div class="relative z-10 inline-flex items-center gap-3 bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 px-4 py-2 rounded-xl text-xs font-mono font-bold tracking-wide mb-6 w-fit">
+          <span>🚀</span>
+          <span>À LA RECHERCHE D'UN POSTE DE : TECHNICIEN INFORMATIQUE & SYSTÈMES</span>
+        </div>
 
-        <!-- FontAwesome -->
-        <script async src="https://kit.fontawesome.com/4a7fb8cea2.js" crossorigin="anonymous"></script>
-
-        <!-- Nivo Lightbox -->
-        <script async src="assets/plugins/nivo-lightbox/nivo-lightbox.min.js"></script>
-
-        <!-- ScrollReveal -->
-        <script async src="assets/js/scrollreveal.min.js"></script>
-
-        <!-- Main JS -->
-        <script async src="assets/js/main.min.js"></script>
-
-    </head>
-
-    <body>
-
-        <div class="c-main-container  js-main-container" style="display: none;">
-
-
-            <!-- ################################ -->
-            <!-- ############ HEADER ############ -->
-            <!-- ################################ -->
+        <div class="relative z-10 my-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-8">
+            <h1 class="text-5xl sm:text-7xl md:text-8xl font-black tracking-tight uppercase leading-[0.9] mb-4 text-title">
+              Bosco <br>
+              <span class="font-serif italic font-normal lowercase text-subtle">strautmann</span>
+            </h1>
+            <p class="text-xl md:text-2xl font-light text-subtle max-w-3xl leading-relaxed mt-6">
+              Technicien IT fort de <span class="font-semibold text-emerald-600 dark:text-emerald-400 underline decoration-emerald-500/40">13+ années d'expérience globale</span> dont 10 ans d'expertise au sein d'une institution internationale à Genève. Polyvalent, résolument orienté humain et passionné par les systèmes hybrides (<span class="font-semibold text-title">JAMF, Meraki, O365</span>), l'automatisation et le web.
+            </p>
             
-            <section class="o-section o-section--header  t-section  t-section--header">
-                <div class="c-header">
+            <div class="mt-8 flex flex-wrap gap-4 font-mono text-xs">
+              <a href="#contact" class="bg-emerald-500 text-black font-bold px-6 py-3 rounded-xl hover:bg-emerald-400 transition flex items-center gap-2 shadow-lg">
+                <span>📩 ME RECRUTER / CONTACTER</span>
+              </a>
+              <a href="https://bstrautmann.com" target="_blank" class="glass-card text-title font-bold px-6 py-3 rounded-xl hover:border-emerald-500/50 transition flex items-center gap-2">
+                <span>🌐 BSTRAUTMANN.COM</span>
+              </a>
+            </div>
+          </div>
 
-                    <div class="o-section__header-bg  t-section__header"></div>
-                    <div class="o-section__content-bg  t-section__content"></div>
+          <div class="lg:col-span-4 flex justify-center">
+            <div class="relative w-64 h-80 md:w-72 md:h-96 rounded-2xl overflow-hidden glass-card p-2 group">
+              <img src="./IMG_1131.jpeg" 
+                   alt="Bosco Strautmann" 
+                   class="w-full h-full object-cover rounded-xl grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100">
+              <div class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-[#141815] to-transparent pointer-events-none"></div>
+              
+              <div class="absolute top-4 right-4 bg-emerald-500 text-black text-[10px] font-mono font-bold px-2 py-1 rounded shadow">
+                DISPO IMMÉDIATE
+              </div>
+            </div>
+          </div>
 
-                    <div class="o-container">
-                        <div class="o-section__container">
+        </div>
 
-                            <header class="o-section__header  c-header__header  t-section__header">
-                                <div class="c-header__inner-header">
+        <!-- MÉTRIQUES MÉTIER (MISES À JOUR SELON TES CONSIGNES) -->
+        <div class="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 md:mt-16 pt-8 border-t grid-line font-mono">
+          <div>
+            <div class="text-xs text-subtle uppercase font-bold">Expérience Totale</div>
+            <div class="text-2xl font-bold text-emerald-500">13+ Ans IT</div>
+          </div>
+          <div>
+            <div class="text-xs text-subtle uppercase font-bold">Institut Int. Lancy</div>
+            <div class="text-2xl font-bold text-title">10 Ans N1/N2</div>
+          </div>
+          <div>
+            <div class="text-xs text-subtle uppercase font-bold">Parc Administré</div>
+            <div class="text-2xl font-bold text-title">3 000 Devices</div>
+          </div>
+          <div>
+            <div class="text-xs text-subtle uppercase font-bold">Auto-Certifications</div>
+            <div class="text-2xl font-bold text-title">70+ Cours</div>
+          </div>
+        </div>
 
-                                    <div class="c-header__avatar">
-                                        <div class="a-header  c-avatar">
-                                            <img class="c-avatar__img" src="assets/images/header/avatar.jpg" width="235" height="307" alt="Bosco Strautmann">
-                                        </div><!-- /c-avatar -->
-                                    </div><!-- /c-header-avatar -->
+      </section>
 
-                                </div><!-- /c-header__inner-header -->
-                            </header><!-- /o-section__header -->
+      <!-- COMPÉTENCES TECHNIQUES -->
+      <section class="p-6 md:p-16 border-b grid-line">
+        <div class="max-w-6xl mx-auto">
+          <div class="font-mono text-xs text-emerald-500 uppercase tracking-widest mb-8 font-bold">// STACK TECHNIQUE & SAVOIR-FAIRE</div>
 
-                            <div class="o-section__content  c-header__content  t-section__content">
-                                <div class="c-header__inner-content">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 font-mono text-xs">
+            <!-- SUPPORT & SYSTÈMES -->
+            <div class="glass-card p-6 rounded-xl space-y-3">
+              <div class="text-emerald-500 font-bold uppercase flex justify-between">
+                <span>// SUPPORT & SYSTÈMES</span>
+                <span class="text-subtle text-[10px]">N1/N2</span>
+              </div>
+              <ul class="space-y-2 text-subtle font-medium">
+                <li class="flex gap-2"><span>•</span><span>Support IT L1/L2 (Pratiques ITIL)</span></li>
+                <li class="flex gap-2"><span>•</span><span>Windows 10/11 & Ecosystème Microsoft 365</span></li>
+                <li class="flex gap-2"><span>•</span><span>macOS, iPadOS, iOS (Environnement Apple)</span></li>
+                <li class="flex gap-2"><span>•</span><span>Microsoft Entra ID (Azure AD), M365 Admin</span></li>
+                <li class="flex gap-2"><span>•</span><span>Google Workspace Admin</span></li>
+                <li class="flex gap-2"><span>•</span><span>Active Directory (AD DS), NAS Synology</span></li>
+              </ul>
+            </div>
 
-                                    <div class="c-header__top">
+            <!-- MDM & INFRA -->
+            <div class="glass-card p-6 rounded-xl space-y-3">
+              <div class="text-emerald-500 font-bold uppercase flex justify-between">
+                <span>// MDM & INFRASTRUCTURE</span>
+                <span class="text-subtle text-[10px]">FLOTTE</span>
+              </div>
+              <ul class="space-y-2 text-subtle font-medium">
+                <li class="flex gap-2"><span>•</span><span>JAMF Pro Cloud & Cisco Meraki Systems Manager</span></li>
+                <li class="flex gap-2"><span>•</span><span>VMware AirWatch</span></li>
+                <li class="flex gap-2"><span>•</span><span>JIRA Service Management & Freshservice</span></li>
+                <li class="flex gap-2"><span>•</span><span>Adressage IPv4, DHCP, VLAN, WiFi 802.1X</span></li>
+                <li class="flex gap-2"><span>•</span><span>VPN (OpenVPN, IPsec), Déploiement MFA</span></li>
+                <li class="flex gap-2"><span>•</span><span>Événementiel : Salles Polycom & Streaming OBS</span></li>
+              </ul>
+            </div>
 
-                                        <div class="c-header__brand">
+            <!-- DEV & WEB -->
+            <div class="glass-card p-6 rounded-xl space-y-3">
+              <div class="text-emerald-500 font-bold uppercase flex justify-between">
+                <span>// DEV, SCRIPTING & WEB</span>
+                <span class="text-subtle text-[10px]">CODE</span>
+              </div>
+              <ul class="space-y-2 text-subtle font-medium">
+                <li class="flex gap-2"><span>•</span><span>Power Automate, Scripts Bash, AppleScript</span></li>
+                <li class="flex gap-2"><span>•</span><span>HTML5, CSS3, PHP, SQL, JavaScript</span></li>
+                <li class="flex gap-2"><span>•</span><span>CMS & Frameworks : Grav, Concrete5, WP, Symfony</span></li>
+                <li class="flex gap-2"><span>•</span><span>UI/UX Design & Responsive Web</span></li>
+                <li class="flex gap-2"><span>•</span><span>SEO Optimization, E-mailing & E-réputation</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                                            <div class="c-brand">
-                                                <h1 class="c-brand__title  t-title">
-                                                    <span class="c-brand__sizer">
-                                                        <span class="a-header  c-brand__first-word">
-                                                            Bosco
-                                                        </span>
-                                                        <span class="a-header  c-brand__second-word  t-title__second-word">
-                                                            Strautmann
-                                                        </span>
-                                                    </span>
-                                                </h1>
-                                                <h2 class="a-header  c-brand__sub-title  t-sub-title">
-                                                    <span class="c-brand__sizer">
-                                                        Web développeur &amp; Digital Marketing Expert
-                                                    </span>
-                                                </h2>
-                                            </div><!-- /c-brand -->
+      <!-- EXPÉRIENCES PROFESSIONNELLES -->
+      <section class="p-6 md:p-16 border-b grid-line">
+        <div class="max-w-6xl mx-auto">
+          <div class="font-mono text-xs text-emerald-500 uppercase tracking-widest mb-12 font-bold">// EXPÉRIENCES PROFESSIONNELLES</div>
 
-                                        </div><!-- /c-header__brand -->
-
-                                        <ul class="c-header__social-buttons  c-social-buttons">
-                                            <li class="a-header">
-                                                <a href="https://www.facebook.com/boscostrautmann" target="_blank" class="c-social-button  t-social-button">
-                                                    <i class="fab  fa-lg  fa-facebook-f"></i>
-                                                </a>
-                                            </li>
-                                            <li class="a-header">
-                                                <a href="https://twitter.com/boscostrautmann" target="_blank" class="c-social-button  t-social-button">
-                                                    <i class="fab  fa-lg  fa-twitter"></i>
-                                                </a>
-                                            </li>
-                                            <li class="a-header">
-                                                <a href="https://www.linkedin.com/in/boscostrautmann/" target="_blank" class="c-social-button  t-social-button">
-                                                    <i class="fab  fa-lg  fa-linkedin"></i>
-                                                </a>
-                                            </li>
-                                        </ul><!-- /c-header__social-buttons -->
-
-                                    </div><!-- /c-header__top -->
-
-                                    <div class="c-header__contact">
-
-                                        <hr class="a-header  c-header__contact-divider" />
-
-                                        <div class="o-grid">
-
-                                            <div class="o-grid__col-md-3  o-grid__col-sm-6">
-                                                <div class="a-header  o-content">
-                                                    <div class="o-content__body">
-                                                        <h4>Origine</h4>
-                                                        <address>
-                                                            Genève, CH
-                                                        </address>
-                                                    </div>
-                                                </div><!-- /o-content -->
-                                            </div><!-- /o-grid__col -->
-
-                                            <div class="o-grid__col-md-3  o-grid__col-sm-6">
-                                                <div class="a-header  o-content">
-                                                    <div class="o-content__body">
-														<a href="tel:0033638931012" target="_blank" class="t-link-container">
-	                                                        <h4>Téléphone</h4>
-	                                                        <p>
-	                                                        	<span class="t-link-container__item--blended">
-	                                                            	+33 6 38 93 10 12
-	                                                            </span>
-	                                                        </p>
-	                                                    </a><!-- /o-link-container -->
-                                                    </div>
-                                                </div><!-- /o-content -->
-                                            </div><!-- /o-grid__col -->
-
-                                            <div class="o-grid__col-md-3  o-grid__col-sm-6">
-                                                <div class="a-header  o-content">
-                                                    <div class="o-content__body">
-                                                        <a href="https://bstrautmann.com" target="_blank" class="t-link-container">
-                                                            <h4>Web</h4>
-                                                            <p>
-                                                                <span class="t-link-container__item--blended">
-                                                                    bstrautmann.com
-                                                                </span>
-                                                            </p>
-                                                        </a><!-- /o-link-container -->
-                                                    </div>
-                                                </div><!-- /o-content -->
-                                            </div><!-- /o-grid__col -->
-
-                                            <div class="o-grid__col-md-3  o-grid__col-sm-6">
-                                                <div class="a-header  o-content">
-                                                    <div class="o-content__body">
-                                                        <a href="mailto:bosco.strautmann@gmail.com" target="_blank" class="t-link-container">
-                                                            <h4>Email</h4>
-                                                            <p>
-                                                                <span class="t-link-container__item--blended">
-                                                                    bosco.strautmann@gmail.com
-                                                                </span>
-                                                            </p>
-                                                        </a><!-- /o-link-container -->
-                                                    </div>
-                                                </div><!-- /o-content -->
-                                            </div><!-- /o-grid__col -->
-
-                                        </div><!-- /o-grid -->
-                                    </div><!-- /c-header__contact -->
-
-                                </div><!-- /c-header__inner-content -->
-                            </div><!-- /o-section__content -->
-
-                        </div><!-- /o-section__container -->
-
-                    </div><!-- /o-container -->
-
-                </div><!-- /c-header -->
-            </section><!-- /o-section -->
-
-
-
-            <!-- ################################ -->
-            <!-- ############ INTRO ############# -->
-            <!-- ################################ -->
+          <div class="space-y-12">
             
-            <section class="o-section  t-section  ">
+            <!-- IIL -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 pb-12 border-b grid-line">
+              <div class="md:col-span-4 font-mono">
+                <span class="text-xs text-emerald-500 font-bold">JUIN 2016 — DÉC. 2025 (10 ANS)</span>
+                <h3 class="text-xl font-bold mt-1 text-title">Technicien Informatique</h3>
+                <p class="text-xs text-subtle mb-4">Institut International de Lancy (Genève)</p>
 
-                <div class="o-section__header-bg  t-section__header"></div>
-                <div class="o-section__content-bg  t-section__content"></div>
+                <button onclick="runJiraSimulation()" class="glass-card border border-blue-400/30 text-blue-400 px-3 py-2 rounded-lg text-xs flex items-center gap-2 hover:bg-blue-400/10 transition font-bold">
+                  <span>⚡ Simuler Ticket JIRA ITIL</span>
+                </button>
+              </div>
 
-                <div class="o-container">
-                    <div class="o-section__container">
+              <div class="md:col-span-8 space-y-4 text-sm text-subtle leading-relaxed">
+                <p class="font-semibold text-title">Support IT L1/L2 selon pratiques ITIL auprès de 1 500 utilisateurs (enseignants, administratifs, élèves).</p>
+                <ul class="list-disc list-outside ml-4 space-y-1.5 text-xs font-mono">
+                  <li><strong class="text-title">Migration MDM majeure :</strong> Réenrôlement complet de la flotte globale (3 000 équipements) de Meraki on-premise vers JAMF Pro Cloud.</li>
+                  <li><strong class="text-title">Optimisation Ticketing :</strong> Migration Freshservice ➔ JIRA avec mise en place des indicateurs de suivi SLA.</li>
+                  <li><strong class="text-title">Mastering & Déploiement :</strong> Création, automatisation et déploiement d’images système (Windows & macOS) pour les renouvellements annuels.</li>
+                  <li><strong class="text-title">Accompagnement :</strong> Formation et vulgarisation auprès des utilisateurs lors du lancement de nouveaux outils.</li>
+                </ul>
 
-                        <header class="o-section__header  t-section__header">
-                            <div class="o-content">
-                                <h2 class="o-section__heading">
-                                    Intro
-                                </h2>
-                                <div class="o-content__body  o-section__description">
-                                    A propos de moi.
-                                </div>
-                            </div>
-                        </header><!-- /o-section__header -->
+                <div id="jira-widget" class="hidden glass-card p-4 rounded-xl font-mono text-xs border border-stone-800 space-y-2">
+                  <div class="flex justify-between items-center border-b border-stone-700/50 pb-2">
+                    <span class="text-blue-400 font-bold">[JIRA-ITIL-#8492]</span>
+                    <span id="jira-status" class="px-2 py-0.5 rounded text-[10px] bg-yellow-500/20 text-yellow-400 font-bold">STATUT : EN ATTENTE</span>
+                  </div>
+                  <div class="text-subtle" id="jira-step">Cliquer sur le bouton pour lancer le workflow...</div>
+                </div>
+              </div>
+            </div>
 
-                        <div class="o-section__content  t-section__content  ">
-                            
-                            <div class="o-content">
-                                <div class="c-intro">
-                                    <div class="o-content__body">
-                                        <p>Passionné d'informatique, expert en web développement et digital marketing, je recherche un poste dans le secteur de l'informatique. Actuellement je propose mes services freelance pour la création de sites web.</p>
-                                        <p>J'ai eu l'occasion de collaborer dans différents projets de développement web pour des grandes entreprises tels que Port-Francs, Raymond-Weil, K2Luxury, Eastside Shop Genève, Thomas Jundt ingénieurs civils, etc.</p>
-                                        <p>Je suis de nature autodidacte, et j'aime enrichir mes connaissances sur des sites de formation en ligne. J'ai d'ailleurs obtenu plus de 70 certificats sur le site <a href="https://openclassrooms.com" target="_blank">openclassrooms.com</a>.</p>
-                                    	<p>En outre, j'ai travaillé au support IT à l'Organisation mondiale de la santé et en tant que technicien Helpdesk à l'Institut Internationale de Lancy à Genève. Je suis compétent dans la gestion de parc informatique, réparation Hardware et Software Macintosh, l'utilisation de Microsoft Sharepoint et de solution MDM tels que JAMF, Meraki et AirWatch.</p>
-                                    	<p>Dans mon temps libre, je pratique du parapente au Salève et de la course à pied depuis 2008.<br />
-                                    	J'aime également l'astrophysique, la moto, les voyages et les bons films ainsi que les nouvelles technologies et le design.</p>
-                                    </div>
-                                </div>
-                            </div>
+            <!-- OMS SOLOG SA -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 pb-12 border-b grid-line">
+              <div class="md:col-span-4 font-mono">
+                <span class="text-xs text-subtle font-bold">NOV. 2015 — MAI 2016</span>
+                <h3 class="text-lg font-bold mt-1 text-title">Technicien & Développeur</h3>
+                <p class="text-xs text-subtle mb-4">OMS - Solog SA</p>
 
-                        </div><!-- /o-section__content -->
+              <!-- BOUTON OMS SOLOG SA (Cyan / Teal) -->
+              <button onclick="runOmsSimulation()" class="glass-card border border-rose-400/30 text-rose-400 px-3 py-2 rounded-lg text-xs flex items-center gap-2 hover:bg-rose-400/10 transition font-bold">
+                <span>⚡ Tester l'outil printer interne (PHP/SQL)</span>
+              </button>
+              </div>
+              <div class="md:col-span-8 space-y-3 text-sm text-subtle">
+                <p class="font-semibold text-title">Double casquette Support IT & Développement applicatif interne.</p>
+                <ul class="list-disc list-outside space-y-1 text-xs font-mono">
+                  <li>Support technique & maintenance applicative de premier et second niveau.</li>
+                  <li>Conception et développement d'outils web sur mesure en PHP/MySQL pour optimiser la gestion interne.</li>
+                  <li>Résolution de bugs complexes et assistance directe auprès des collaborateurs.</li>
+                </ul>
 
-                    </div><!-- /o-section__container -->
-                </div><!-- /o-container -->
+                <!-- Widget OMS -->
+                <div id="oms-widget" class="hidden glass-card p-4 rounded-xl font-mono text-xs border border-stone-800 space-y-3 mt-4">
+                  <div class="flex justify-between items-center border-b border-stone-700/50 pb-2">
+                    <span class="text-rose-400 font-bold">[OMS-INTERNAL-APP] Module Printer</span>
+                    <span id="oms-status" class="px-2 py-0.5 rounded text-[10px] bg-blue-500/20 text-blue-400 font-bold">READY</span>
+                  </div>
+                  <div id="oms-output" class="space-y-1.5 text-subtle">
+                    Clique sur le bouton pour simuler l'exécution du script...
+                  </div>
+                </div>
+              </div>
+            </div>
 
-            </section><!-- /o-section -->
+            <!-- FREELANCE -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 pb-12 border-b grid-line">
+              <div class="md:col-span-4 font-mono">
+                <span class="text-xs text-subtle font-bold">AOÛT 2014 — NOV. 2015</span>
+                <h3 class="text-lg font-bold mt-1 text-title">Webmaster Freelance</h3>
+                <p class="text-xs text-subtle mb-4">Indépendant / Clients divers</p>
 
+              <!-- BOUTON FREELANCE / GRAV CMS (Violet / Indigo) -->
+              <button onclick="runGravTerminal()" class="glass-card border border-emerald-400/30 text-emerald-400 px-3 py-2 rounded-lg text-xs flex items-center gap-2 hover:bg-emerald-400/10 transition font-bold">
+                <span>>_ Lancer Build Grav CMS</span>
+              </button>
+              </div>
+              <div class="md:col-span-8 space-y-3 text-sm text-subtle">
+                <p class="font-semibold text-title">Gestion intégrale de projets web pour entreprises et indépendants.</p>
+                <ul class="list-disc list-outside space-y-1 text-xs font-mono">
+                  <li>Création, refonte et maintenance de sites internet centrés sur l'expérience utilisateur (UX).</li>
+                  <li>Stratégies d'optimisation SEO (référencement naturel) et campagnes d'e-mailing ciblées.</li>
+                  <li>Gestion de la relation client, rédaction de cahiers des charges et déploiement d'hébergements web.</li>
+                </ul>
 
+                <div id="vscode-widget" class="hidden bg-black/90 p-4 rounded-xl font-mono text-xs border border-stone-800 space-y-1 text-stone-400">
+                  <div class="flex items-center gap-1.5 border-b border-stone-800 pb-2 mb-2 text-[10px] text-stone-500">
+                    <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-green-500"></span>
+                    <span class="ml-2">bash - grav-cms-builder</span>
+                  </div>
+                  <div id="terminal-content" class="space-y-1"></div>
+                </div>
+              </div>
+            </div>
 
-            <!-- ################################ -->
-            <!-- ########## EXPERTISE ########### -->
-            <!-- ################################ -->
+            <!-- KBSD SA -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 pb-12 border-b grid-line">
+              <div class="md:col-span-4 font-mono">
+                <span class="text-xs text-subtle font-bold">NOV. 2013 — JUIL. 2014</span>
+                <h3 class="text-lg font-bold mt-1 text-title">Webmaster & Analyste</h3>
+                <p class="text-xs text-subtle mb-4">KBSD SA</p>
+
+                <!-- Bouton KBSD -->
+                <button onclick="runKbsdSimulation()" class="glass-card border border-purple-500/30 text-purple-400 px-3 py-2 rounded-lg text-xs flex items-center gap-2 hover:bg-purple-500/10 transition font-bold">
+                  <span>📊 Auditer l'E-Réputation (Brand Sentiment)</span>
+                </button>
+              </div>
+              <div class="md:col-span-8 space-y-3 text-sm text-subtle">
+                <p class="font-semibold text-title">Développement CMS & Suivi d'e-réputation haut de gamme.</p>
+                <ul class="list-disc list-outside space-y-1 text-xs font-mono">
+                  <li>Développement de plateformes web via Concrete5, principalement pour des clients du secteur du luxe.</li>
+                  <li>Veille active sur l'e-réputation de marques et analyse minutieuse des indicateurs de performance (KPI).</li>
+                </ul>
+
+                <!-- Widget KBSD -->
+                <div id="kbsd-widget" class="hidden glass-card p-4 rounded-xl font-mono text-xs border border-stone-800 space-y-3 mt-4">
+                  <div class="flex justify-between items-center border-b border-stone-700/50 pb-2">
+                    <span class="text-purple-400 font-bold">[KBSD Analytics] Brand Index</span>
+                    <span id="kbsd-status" class="px-2 py-0.5 rounded text-[10px] bg-purple-500/20 text-purple-300 font-bold">ANALYSIS</span>
+                  </div>
+                  <div id="kbsd-output" class="space-y-1.5 text-subtle">
+                    Analyse des données web et réseaux en cours...
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- INTEGRAAL IT -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 pb-12 border-b grid-line">
+              <div class="md:col-span-4 font-mono">
+                <span class="text-xs text-subtle font-bold">JUIL. 2013 — NOV. 2013</span>
+                <h3 class="text-lg font-bold mt-1 text-title">Développeur Web Consultant</h3>
+                <p class="text-xs text-subtle mb-4">Integraal IT</p>
+
+                <!-- Bouton Integraal IT -->
+                <button onclick="runIntegraalSimulation()" class="glass-card border border-amber-500/30 text-amber-500 px-3 py-2 rounded-lg text-xs flex items-center gap-2 hover:bg-amber-500/10 transition font-bold">
+                  <span>📂 Parser le fichier CSV (Thomas Jundt SA)</span>
+                </button>
+              </div>
+              <div class="md:col-span-8 space-y-3 text-sm text-subtle">
+                <p class="font-semibold text-title">Consulting & Développements spécifiques PHP.</p>
+                <ul class="list-disc list-outside space-y-1 text-xs font-mono">
+                  <li>Conception et intégration d'outils web sur mesure en PHP / MySQL.</li>
+                  <li>Optimisation de bases de données, intégration de fichier CSV et documentation technique des modules.</li>
+                </ul>
+
+                <!-- Widget Integraal IT -->
+                <div id="integraal-widget" class="hidden glass-card p-4 rounded-xl font-mono text-xs border border-stone-800 space-y-3 mt-4">
+                  <div class="flex justify-between items-center border-b border-stone-700/50 pb-2">
+                    <span class="text-amber-400 font-bold">[PHP CSV-Parser v1.0] client_jundt_data.csv</span>
+                    <span id="integraal-status" class="px-2 py-0.5 rounded text-[10px] bg-amber-500/20 text-amber-400 font-bold">IDLE</span>
+                  </div>
+                  <div id="integraal-output" class="space-y-2 text-subtle">
+                    Prêt à lire le fichier brut...
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- STAGES INITIALS -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+              <div class="md:col-span-4 font-mono">
+                <span class="text-xs text-subtle font-bold">2008 — 2012</span>
+                <h3 class="text-lg font-bold mt-1 text-title">Stages & Premiers Pas IT</h3>
+                <p class="text-xs text-subtle">Genève</p>
+              </div>
+              <ul class="md:col-span-8 space-y-2 text-xs font-mono text-subtle list-disc list-outside">
+                <li><strong class="text-title">Professeur remplaçant — Ateliers Nomades:</strong> Transmission, pédagogie et initiation à la technologie.</li>
+                <li><strong class="text-title">Stage Développeur PHP — Solutions Concept:</strong> Découverte du monde de l'édition logicielle.</li>
+                <li><strong class="text-title">Stage Programmeur PHP/MySQL — Cj Online Works:</strong> Premier apprentissage du dev web dynamique.</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ÉDUCATION & LANGUES (SANS DRAPEAUX) -->
+      <section class="p-6 md:p-16 border-b grid-line">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+          
+          <!-- FORMATION -->
+          <div>
+            <div class="font-mono text-xs text-emerald-500 uppercase tracking-widest mb-6 font-bold">// FORMATION & CERTIFICATS</div>
+            <div class="space-y-6">
+              <div class="glass-card p-6 rounded-xl">
+                <span class="font-mono text-xs text-emerald-500 font-bold">2008 — 2013</span>
+                <h4 class="text-lg font-bold text-title">CFC Informaticien Généraliste</h4>
+                <p class="text-xs font-mono text-subtle">CFPT Informatique Genève (Suisse)</p>
+              </div>
+
+              <div class="glass-card p-6 rounded-xl">
+                <span class="font-mono text-xs text-emerald-500 font-bold">AUTODIDACTE</span>
+                <h4 class="text-lg font-bold text-title">+70 Certificats de Cours</h4>
+                <p class="text-xs font-mono text-subtle">OpenClassrooms (Systèmes, Web, Réseau, Dev, Sécurité)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- LANGUES SANS DRAPEAUX -->
+          <div>
+            <div class="font-mono text-xs text-emerald-500 uppercase tracking-widest mb-6 font-bold">// LANGUES PRO</div>
+            <div class="glass-card p-6 rounded-xl space-y-4 font-mono text-xs">
+              <div class="flex justify-between items-center border-b grid-line pb-2">
+                <span class="text-title font-bold">FRANÇAIS</span>
+                <span class="text-emerald-500 font-bold">Langue Maternelle</span>
+              </div>
+              <div class="flex justify-between items-center border-b grid-line pb-2">
+                <span class="text-title font-bold">ANGLAIS</span>
+                <span class="text-emerald-500 font-bold">Capacité professionnelle</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-title font-bold">PORTUGAIS</span>
+                <span class="text-subtle font-bold">Capacité limitée</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- HOBBIES -->
+      <section class="p-6 md:p-16 border-b grid-line">
+        <div class="max-w-6xl mx-auto">
+          <div class="font-mono text-xs text-emerald-500 uppercase tracking-widest mb-8 font-bold">// HOBBIES & PASSIONS</div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 font-mono text-xs">
+            <div class="glass-card p-5 rounded-xl">
+              <div class="text-title font-bold mb-2">🚴 CYCLISME</div>
+              <div class="text-subtle">Tour du Lac Léman, Tour du Canton, ViaRhôna Genève-Lyon.</div>
+            </div>
+
+            <div class="glass-card p-5 rounded-xl">
+              <div class="text-title font-bold mb-2">🛶 AVENTURES</div>
+              <div class="text-subtle">Descente du Rhône en Kayak, Voyages Backpacking.</div>
+            </div>
+
+            <div class="glass-card p-5 rounded-xl">
+              <div class="text-title font-bold mb-2">🤖 TECH & AI</div>
+              <div class="text-subtle">Domotique IoT, Agents IA, Design UI & Création Web.</div>
+            </div>
+
+            <div class="glass-card p-5 rounded-xl">
+              <div class="text-title font-bold mb-2">🌌 BONUS</div>
+              <div class="text-subtle">Cuisine, Astrophysique, Bricolage et DIY.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION CONTACT -->
+      <section id="contact" class="p-6 md:p-16 border-b grid-line">
+        <div class="max-w-4xl mx-auto">
+          <div class="font-mono text-xs text-emerald-500 uppercase tracking-widest mb-4 font-bold">// INITIALISER LA CONNEXION</div>
+          
+          <h2 class="text-3xl md:text-5xl font-black text-title uppercase tracking-tight mb-12">
+            Un projet? Un poste? <br>
+            <span class="font-serif italic font-normal text-subtle lowercase">discutons-en.</span>
+          </h2>
+
+          <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-8 font-mono text-sm">
+
+            <!-- Champ Honeypot invisible pour piéger les robots -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
             
-            <section class="o-section  t-section  ">
-
-                <div class="o-section__header-bg  t-section__header"></div>
-                <div class="o-section__content-bg  t-section__content"></div>
-
-                <div class="o-container">
-                    <div class="o-section__container">
-
-                        <header class="o-section__header  t-section__header">
-                            <div class="o-content">
-                                <h2 class="o-section__heading">
-                                    Expertise
-                                </h2>
-                                <div class="o-content__body  o-section__description">
-                                    Hello World !
-                                </div>
-                            </div>
-                        </header><!-- /o-section__header -->
-
-                        <div class="o-section__content  t-section__content  ">
-                            
-                            <div class="o-grid">
-
-                                <div class="o-grid__col-sm-6">
-                                    <div class="o-media  o-media--block  o-content">
-                                        <div class="o-media__figure">
-                                            <div class="c-number  t-primary-color">
-                                                01
-                                            </div>
-                                        </div>
-                                        <div class="o-media__body  o-content__body">
-                                            <h3>Advanced CSS</h3>
-                                            <p>
-                                                Création Web en Responsive Design avec Bootstrap, LESS et Sass.
-                                            </p>
-                                        </div>
-                                    </div><!-- /o-media o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <div class="o-media  o-media--block  o-content">
-                                        <div class="o-media__figure">
-                                            <div class="c-number  t-primary-color">
-                                                02
-                                            </div>
-                                        </div>
-                                        <div class="o-media__body  o-content__body">
-                                            <h3>Moderne Site Web</h3>
-                                            <p>
-                                                Mise en place de projets web avec les Content Managment System (CMS) Concrete5, Wordpress ou Joomla.
-                                            </p>
-                                        </div>
-                                    </div><!-- /o-media o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <div class="o-media  o-media--block  o-content">
-                                        <div class="o-media__figure">
-                                            <div class="c-number  t-primary-color">
-                                                03
-                                            </div>
-                                        </div>
-                                        <div class="o-media__body  o-content__body">
-                                            <h3>Digital Marketing</h3>
-                                            <p>
-                                                Gestion de projet Digital Marketing ainsi que la curation de contenu, la mise en place de campagne de e-mailing, le Community Management et l'optimisation SEO.
-                                            </p>
-                                        </div>
-                                    </div><!-- /o-media o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <div class="o-media  o-media--block  o-content">
-                                        <div class="o-media__figure">
-                                            <div class="c-number  t-primary-color">
-                                                04
-                                            </div>
-                                        </div>
-                                        <div class="o-media__body  o-content__body">
-                                            <h3>Methodologies</h3>
-                                            <p>
-                                                J'apprécie de travailler avec les methodologies agiles et de faire la formation à la clientèle dans ses domaines.
-                                            </p>
-                                        </div>
-                                    </div><!-- /o-media o-content -->
-                                </div><!-- /o-grid__col -->
-
-                            </div><!-- /o-grid -->
-
-                        </div><!-- /o-section__content -->
-
-                    </div><!-- /o-section__container -->
-                </div><!-- /o-container -->
-
-            </section><!-- /o-section -->
-
-
-
-            <!-- ################################ -->
-            <!-- ############ SKILLS ############ -->
-            <!-- ################################ -->
-            
-            <section class="o-section  t-section  ">
-
-                <div class="o-section__header-bg  t-section__header"></div>
-                <div class="o-section__content-bg  t-section__content"></div>
-
-                <div class="o-container">
-                    <div class="o-section__container">
-
-                        <header class="o-section__header  t-section__header">
-                            <div class="o-content">
-                                <h2 class="o-section__heading">
-                                    Skills
-                                </h2>
-                                <div class="o-content__body  o-section__description">
-                                    Et ce n'est que le début.
-                                </div>
-                            </div>
-                        </header><!-- /o-section__header -->
-
-                        <div class="o-section__content  t-section__content  ">
-                            
-                            <div class="o-grid">
-
-                                <div class="o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <div class="o-media  o-media--block">
-                                            <div class="o-media__figure">
-                                                <div class="c-number  t-primary-color">
-                                                    90<small>%</small>
-                                                </div>
-                                            </div>
-                                            <div class="o-media__body">
-                                                <h3>PHP orientée objet</h3>
-                                            </div>
-                                        </div>
-                                        <div class="c-progress-bar  o-content__body  t-border-color-bg  u-mt-text">
-                                            <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" data-percent="90"></div>
-                                        </div>
-                                    </div>
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <div class="o-media  o-media--block">
-                                            <div class="o-media__figure">
-                                                <div class="c-number  t-primary-color">
-                                                    70<small>%</small>
-                                                </div>
-                                            </div>
-                                            <div class="o-media__body">
-                                                <h3>Symfony 5</h3>
-                                            </div>
-                                        </div>
-                                        <div class="c-progress-bar  o-content__body  t-border-color-bg  u-mt-text">
-                                            <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" data-percent="70"></div>
-                                        </div>
-                                    </div>
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <div class="o-media  o-media--block">
-                                            <div class="o-media__figure">
-                                                <div class="c-number  t-primary-color">
-                                                    75<small>%</small>
-                                                </div>
-                                            </div>
-                                            <div class="o-media__body">
-                                                <h3>Git</h3>
-                                            </div>
-                                        </div>
-                                        <div class="c-progress-bar  o-content__body  t-border-color-bg  u-mt-text">
-                                            <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" data-percent="75"></div>
-                                        </div>
-                                    </div>
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <div class="o-media  o-media--block">
-                                            <div class="o-media__figure">
-                                                <div class="c-number  t-primary-color">
-                                                    55<small>%</small>
-                                                </div>
-                                            </div>
-                                            <div class="o-media__body">
-                                                <h3>SQL</h3>
-                                            </div>
-                                        </div>
-                                        <div class="c-progress-bar  o-content__body  t-border-color-bg  u-mt-text">
-                                            <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" data-percent="55"></div>
-                                        </div>
-                                    </div>
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <div class="o-media  o-media--block">
-                                            <div class="o-media__figure">
-                                                <div class="c-number  t-primary-color">
-                                                    85<small>%</small>
-                                                </div>
-                                            </div>
-                                            <div class="o-media__body">
-                                                <h3>Javascript / JQuery</h3>
-                                            </div>
-                                        </div>
-                                        <div class="c-progress-bar  o-content__body  t-border-color-bg  u-mt-text">
-                                            <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" data-percent="85"></div>
-                                        </div>
-                                    </div>
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <div class="o-media  o-media--block">
-                                            <div class="o-media__figure">
-                                                <div class="c-number  t-primary-color">
-                                                    70<small>%</small>
-                                                </div>
-                                            </div>
-                                            <div class="o-media__body">
-                                                <h3>CSS3 Animation</h3>
-                                            </div>
-                                        </div>
-                                        <div class="c-progress-bar  o-content__body  t-border-color-bg  u-mt-text">
-                                            <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" data-percent="70"></div>
-                                        </div>
-                                    </div>
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <div class="o-media  o-media--block">
-                                            <div class="o-media__figure">
-                                                <div class="c-number  t-primary-color">
-                                                    90<small>%</small>
-                                                </div>
-                                            </div>
-                                            <div class="o-media__body">
-                                                <h3>Digital Marketing</h3>
-                                            </div>
-                                        </div>
-                                        <div class="c-progress-bar  o-content__body  t-border-color-bg  u-mt-text">
-                                            <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" data-percent="90"></div>
-                                        </div>
-                                    </div>
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <div class="o-media  o-media--block">
-                                            <div class="o-media__figure">
-                                                <div class="c-number  t-primary-color">
-                                                    85<small>%</small>
-                                                </div>
-                                            </div>
-                                            <div class="o-media__body">
-                                                <h3>SEO</h3>
-                                            </div>
-                                        </div>
-                                        <div class="c-progress-bar  o-content__body  t-border-color-bg  u-mt-text">
-                                            <div class="a-progress-bar  c-progress-bar__filler  t-primary-bg" data-percent="85"></div>
-                                        </div>
-                                    </div>
-                                </div><!-- /o-grid__col -->
-
-                            </div><!-- /o-grid -->
-
-                        </div><!-- /o-section__content -->
-
-                    </div><!-- /o-section__container -->
-                </div><!-- /o-container -->
-
-            </section><!-- /o-section -->
-
-
-
-            <!-- ################################ -->
-            <!-- ########## EXPERIENCE ########## -->
-            <!-- ################################ -->
-            
-            <section class="o-section  t-section  ">
-
-                <div class="o-section__header-bg  t-section__header"></div>
-                <div class="o-section__content-bg  t-section__content"></div>
-
-                <div class="o-container">
-                    <div class="o-section__container">
-
-                        <header class="o-section__header  t-section__header">
-                            <div class="o-content">
-                                <h2 class="o-section__heading">
-                                    Experience
-                                </h2>
-                                <div class="o-content__body  o-section__description">
-                                    Oui. Je suis passé par là.
-                                </div>
-                            </div>
-                        </header><!-- /o-section__header -->
-
-                        <div class="o-section__content  t-section__content  u-pb-0">
-                            
-                            <div class="a-experience-timeline  c-timeline  t-border-color">
-
-                                <div class="c-timeline__item">
-                                    <div class="c-timeline__point  t-timeline__point  t-primary-bg"></div>
-                                    <div class="o-content">
-                                        <div class="o-grid">
-                                            <div class="o-grid__col-md-5">
-                                                <div class="c-work__timeframe">
-                                                    2016 &ndash; Present
-                                                </div>
-                                                <h3 class="c-work__heading">
-                                                    Institut International de Lancy
-                                                </h3>
-                                                <h4 class="c-work__title">
-                                                    Technicien Helpdesk
-                                                </h4>
-                                                <div class="c-work__location">
-                                                    Grand-Lancy, GE
-                                                </div>
-                                            </div>
-                                            <div class="o-grid__col-md-7">
-                                                <p>
-                                                    L’objectif visé par l'Institut International de Lancy en matière de matériel et d’infrastructures informatiques tient en une seule phrase : exploiter au maximum les possibilités de la technologie tout en maximisant la sécurité des utilisateurs et des données.
-                                                </p>
-                                            </div>
-                                        </div><!-- /o-grid -->
-                                    </div><!-- /o-content -->
-                                </div><!-- /c-timeline__item -->
-
-                                <div class="c-timeline__item">
-                                    <div class="c-timeline__point  t-timeline__point  t-primary-bg"></div>
-                                    <div class="o-content">
-                                        <div class="o-grid">
-                                            <div class="o-grid__col-md-5">
-                                                <div class="c-work__timeframe">
-                                                    2015 &ndash; 2016
-                                                </div>
-                                                <h3 class="c-work__heading">
-                                                    Organisation Mondial de la Santé
-                                                </h3>
-                                                <h4 class="c-work__title">
-                                                    Technicien &amp; Développeur chez Solog SA
-                                                </h4>
-                                                <div class="c-work__location">
-                                                    Genève, CH
-                                                </div>
-                                            </div>
-                                            <div class="o-grid__col-md-7">
-                                                <p>
-                                                    Solog intervient tant au niveau des administrations cantonales, des hôpitaux universitaires, que des fédérations ou organes spécifiques de la confédération. Enfin nous sommes également très présents dans les organisations non-gouvernementales.
-                                                </p>
-                                            </div>
-                                        </div><!-- /o-grid -->
-                                    </div><!-- /o-content -->
-                                </div><!-- /c-timeline__item -->
-
-                                <div class="c-timeline__item">
-                                    <div class="c-timeline__point  t-timeline__point  t-primary-bg"></div>
-                                    <div class="o-content">
-                                        <div class="o-grid">
-                                            <div class="o-grid__col-md-5">
-                                                <div class="c-work__timeframe">
-                                                    2013 &ndash; 2014
-                                                </div>
-                                                <h3 class="c-work__heading">
-                                                    KBSD SA
-                                                </h3>
-                                                <h4 class="c-work__title">
-                                                    Webmaster
-                                                </h4>
-                                                <div class="c-work__location">
-                                                    Genève, CH
-                                                </div>
-                                            </div>
-                                            <div class="o-grid__col-md-7">
-                                                <p>
-                                                    KBSD, agence de conseil européenne leader en intelligence digitale et en e-réputation, est spécialisée dans la visibilité et la défense des marques et des identités sur Internet.
-                                                </p>
-                                            </div>
-                                        </div><!-- /o-grid -->
-                                    </div><!-- /o-content -->
-                                </div><!-- /c-timeline__item -->
-
-                            </div><!-- /c-timeline -->
-
-                        </div><!-- /o-section__content -->
-
-                    </div><!-- /o-section__container -->
-                </div><!-- /o-container -->
-
-            </section><!-- /o-section -->
-
-
-
-            <!-- ################################ -->
-            <!-- ########### EDUCATION ########## -->
-            <!-- ################################ -->
-            
-            <section class="o-section  t-section  ">
-
-                <div class="o-section__header-bg  t-section__header"></div>
-                <div class="o-section__content-bg  t-section__content"></div>
-
-                <div class="o-container">
-                    <div class="o-section__container">
-
-                        <header class="o-section__header  t-section__header">
-                            <div class="o-content">
-                                <h2 class="o-section__heading">
-                                    Education
-                                </h2>
-                                <div class="o-content__body  o-section__description">
-                                    Autodidacte, toujours.
-                                </div>
-                            </div>
-                        </header><!-- /o-section__header -->
-
-                        <div class="o-section__content  t-section__content  u-pt-0">
-                            
-                            <div class="o-content">
-                                <div class="a-education-timeline  c-timeline  t-border-color  o-section__full-top-space">
-                                    <div class="c-timeline__end  t-border-color"></div>
-
-                                    <div class="c-timeline__item">
-                                        <div class="c-timeline__point  t-timeline__point  t-primary-bg"></div>
-                                        <div class="o-content">
-                                            <div class="o-grid">
-                                                <div class="o-grid__col-md-5">
-                                                    <div class="c-work__timeframe">
-                                                        2018
-                                                    </div>
-                                                    <h3 class="c-work__heading">
-                                                        Openclassrooms.com
-                                                    </h3>
-                                                    <h4 class="c-work__title">
-                                                        Parcours &gt; Développeur Web
-                                                    </h4>
-                                                    <div class="c-work__location">
-                                                        Online
-                                                    </div>
-                                                </div>
-                                                <div class="o-grid__col-md-7">
-                                                    <p>
-                                                        OpenClassrooms est une école en ligne offrant des parcours diplômants et professionnalisants à plus de trois millions d'étudiants chaque mois à travers le monde. Quelle que soit votre ambition, OpenClassrooms peut vous aider à bâtir votre avenir.
-                                                    </p>
-                                                </div>
-                                            </div><!-- /o-grid -->
-                                        </div><!-- /o-content -->
-                                    </div><!-- /c-timeline__item -->
-
-                                    <div class="c-timeline__item">
-                                        <div class="c-timeline__point  t-timeline__point  t-primary-bg"></div>
-                                        <div class="o-content">
-                                            <div class="o-grid">
-                                                <div class="o-grid__col-md-5">
-                                                    <div class="c-work__timeframe">
-                                                        2008 &ndash; 2013
-                                                    </div>
-                                                    <h3 class="c-work__heading">
-                                                        CFPT informatique
-                                                    </h3>
-                                                    <h4 class="c-work__title">
-                                                        CFC d'informaticien généraliste
-                                                    </h4>
-                                                    <div class="c-work__location">
-                                                        Genève, CH
-                                                    </div>
-                                                </div>
-                                                <div class="o-grid__col-md-7">
-                                                    <p>
-                                                        Le CFPT Informatique est une école professionel basé à Genève. Le plan études est constitué de cours professionnels dispensant la théorie du métier, d'ateliers permettant la pratique, ainsi que des cours de culture générale.
-                                                    </p>
-                                                </div>
-                                            </div><!-- /o-grid -->
-                                        </div><!-- /o-content -->
-                                    </div><!-- /c-timeline__item -->
-
-                                </div><!-- /c-timeline -->
-                            </div><!-- /o-content -->
-
-                        </div><!-- /o-section__content -->
-
-                    </div><!-- /o-section__container -->
-                </div><!-- /o-container -->
-
-            </section><!-- /o-section -->
-
-
-
-
-
-            <!-- ################################ -->
-            <!-- ############ HEADER ############ -->
-            <!-- ################################ -->
-            
-            <section class="o-section  t-section  ">
-
-                <div class="o-section__header-bg  t-section__header"></div>
-                <div class="o-section__content-bg  t-section__content"></div>
-
-                <div class="o-container">
-                    <div class="o-section__container">
-
-                        <header class="o-section__header  t-section__header">
-                            <div class="o-content">
-                                <h2 class="o-section__heading">
-                                    Certificats
-                                </h2>
-                                <div class="o-content__body  o-section__description">
-                                    Happy times!
-                                </div>
-                            </div>
-                        </header><!-- /o-section__header -->
-
-                        <div class="o-section__content  t-section__content  section-certificats">
-                            <div class="o-content">
-                            	<h3>J'ai obtenu plus de 70 certificats sur le site <a href="https://openclassrooms.com" target="_blank">openclassrooms.com</a>.</h3>
-                            </div>
-
-                            <div class="o-grid">
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Concevez votre site web avec PHP et MySQL</h4>
-                                            <a href="./assets/certificats/concevez_votre_site_web_avec_php_et_mysql.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Apprenez à créer votre site web avec HTML5 et CSS3</h4>
-                                            <a href="./assets/certificats/apprenez_a_creer_votre_site_web_avec_html5_et_css3.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Les clés pour devenir Community Manager</h4>
-                                            <a href="./assets/certificats/les_cles_pour_devenir_community_manager.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Travailler en mode collaboratif au quotidien</h4>
-                                            <a href="./assets/certificats/travailler_en_mode_collaboratif_au_quotidien.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Augmentez votre trafic grâce au référencement naturel (SEO)</h4>
-                                            <a href="./assets/certificats/augmentez_votre_trafic_grace_au_referencement_naturel_seo.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Découvrir la posture d’agilité</h4>
-                                            <a href="./assets/certificats/decouvrir_la_posture_dagilite.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <!-- LOAD MORE START -->
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Adoptez les API REST pour vos projets web</h4>
-                                            <a href="./assets/certificats/adoptez_les_api_rest_pour_vos_projets_web.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Adoptez Visual Studio comme environnement de développement</h4>
-                                            <a href="./assets/certificats/adoptez_visual_studio_comme_environnement_de_developpement.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Améliorez l'impact de vos présentations</h4>
-                                            <a href="./assets/certificats/ameliorez_limpact_de_vos_presentations.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Animez vos réseaux sociaux</h4>
-                                            <a href="./assets/certificats/animez_vos_reseaux_sociaux.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Appliquez les principes du Green IT dans votre entreprise</h4>
-                                            <a href="./assets/certificats/appliquez_les_principes_du_green_it_dans_votre_entreprise.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Apprenez à apprendre</h4>
-                                            <a href="./assets/certificats/apprenez_a_apprendre.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Apprenez à bien cadrer un projet multimédia</h4>
-                                            <a href="./assets/certificats/apprenez_a_bien_cadrer_un_projet_multimedia.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Apprenez à naviguer en sécurité sur Internet</h4>
-                                            <a href="./assets/certificats/apprenez_a_naviguer_en_securite_sur_internet.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Apprenez à programmer avec JavaScript</h4>
-                                            <a href="./assets/certificats/apprenez_a_programmer_avec_javascript.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Apprenez à utiliser la ligne de commande dans un terminal</h4>
-                                            <a href="./assets/certificats/apprenez_a_utiliser_la_ligne_de_commande_dans_un_terminal.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Avoir l'audace d'entreprendre</h4>
-                                            <a href="./assets/certificats/avoir_laudace_dentreprendre.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Comment le modèle économique des entreprises se bouleverse pour aller vers de nouveaux clients</h4>
-                                            <a href="./assets/certificats/comment_le_modele_economique_des_entreprises_se_bouleverse_pour_aller_vers_de_nouveaux_clients.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Comprendre le Bitcoin et la Blockchain</h4>
-                                            <a href="./assets/certificats/comprendre_le_bitcoin_et_la_blockchain.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Comprendre le Web</h4>
-                                            <a href="./assets/certificats/comprendre_le_web.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Comprenez votre audience avec Google Analytics</h4>
-                                            <a href="./assets/certificats/comprenez_votre_audience_avec_google_analytics.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Construisez une stratégie social media</h4>
-                                            <a href="./assets/certificats/construisez_une_strategie_social_media.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Contrôlez l'utilisation de vos données personnelles</h4>
-                                            <a href="./assets/certificats/controlez_lutilisation_de_vos_donnees_personnelles.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Créez des animations CSS modernes</h4>
-                                            <a href="./assets/certificats/creez_des_animations_css_modernes.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Créez des sites web responsive avec Bootstrap 4</h4>
-                                            <a href="./assets/certificats/creez_des_sites_web_responsive_avec_bootstrap_4.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Créez et appliquez une charte graphique</h4>
-                                            <a href="./assets/certificats/creez_et_appliquez_une_charte_graphique.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Créez un site moderne et professionnel avec WordPress 5</h4>
-                                            <a href="./assets/certificats/creez_un_site_moderne_et_professionnel_avec_wordpress_5.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Débutez l'analyse logicielle avec UML</h4>
-                                            <a href="./assets/certificats/debutez_lanalyse_logicielle_avec_uml.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Découpez et intégrez une maquette</h4>
-                                            <a href="./assets/certificats/decoupez_et_integrez_une_maquette.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Découvrez le métier de community manager</h4>
-                                            <a href="./assets/certificats/decouvrez_le_metier_de_community_manager.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Découvrez le monde des start-ups</h4>
-                                            <a href="./assets/certificats/decouvrez_le_monde_des_startups.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Découvrez les bases de la gestion de projet</h4>
-                                            <a href="./assets/certificats/decouvrez_les_bases_de_la_gestion_de_projet.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Découvrez les solutions CMS</h4>
-                                            <a href="./assets/certificats/decouvrez_les_solutions_cms.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Développer sa posture d’ouverture</h4>
-                                            <a href="./assets/certificats/developper_sa_posture_douverture.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Développez votre activité avec le Marketing de Contenu</h4>
-                                            <a href="./assets/certificats/developpez_votre_activite_avec_le_marketing_de_contenu.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Développez votre personal branding</h4>
-                                            <a href="./assets/certificats/developpez_votre_personal_branding.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Développez votre résilience</h4>
-                                            <a href="./assets/certificats/developpez_votre_resilience.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Devenez parrain et développez vos compétences transverses</h4>
-                                            <a href="./assets/certificats/devenez_parrain_et_developpez_vos_competences_transverses.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Échangez par e-mail en toute sécurité</h4>
-                                            <a href="./assets/certificats/echangez_par_email_en_toute_securite.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Écrivez du JavaScript pour le web</h4>
-                                            <a href="./assets/certificats/ecrivez_du_javascript_pour_le_web.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Élaborez votre campagne publicitaire</h4>
-                                            <a href="./assets/certificats/elaborez_votre_campagne_publicitaire.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Élaborez votre stratégie de recherche d'emploi</h4>
-                                            <a href="./assets/certificats/elaborez_votre_strategie_de_recherche_demploi.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Financer son entreprise</h4>
-                                            <a href="./assets/certificats/financer_son_entreprise.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Gérer son identité numérique</h4>
-                                            <a href="./assets/certificats/gerer_son_identite_numerique.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Gérez un projet digital avec une méthodologie en cascade</h4>
-                                            <a href="./assets/certificats/gerez_un_projet_digital_avec_une_methodologie_en_cascade.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Gérez votre projet informatique facilement</h4>
-                                            <a href="./assets/certificats/gerez_votre_projet_informatique_facilement.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Initiez-vous à la gestion de projet agile</h4>
-                                            <a href="./assets/certificats/initiezvous_a_la_gestion_de_projet_agile.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Initiez-vous au Design Thinking</h4>
-                                            <a href="./assets/certificats/initiezvous_au_design_thinking.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Initiez-vous au marketing digital</h4>
-                                            <a href="./assets/certificats/initiezvous_au_marketing_digital.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Initiez-vous aux techniques commerciales</h4>
-                                            <a href="./assets/certificats/initiezvous_aux_techniques_commerciales.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Intégrer des postures de responsabilité et d'organisation</h4>
-                                            <a href="./assets/certificats/integrer_des_postures_de_responsabilite_et_dorganisation.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Le Big Data transforme ma vie et celle des entreprises</h4>
-                                            <a href="./assets/certificats/le_big_data_transforme_ma_vie_et_celle_des_entreprises.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Les clés pour réussir son référencement web</h4>
-                                            <a href="./assets/certificats/les_cles_pour_reussir_son_referencement_web.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Maintenez-vous à jour en développement</h4>
-                                            <a href="./assets/certificats/maintenezvous_a_jour_en_developpement.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Maîtrisez les risques juridiques liés au numérique</h4>
-                                            <a href="./assets/certificats/maitrisez_les_risques_juridiques_lies_au_numerique.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Mettez en place un système de veille informationnelle</h4>
-                                            <a href="./assets/certificats/mettez_en_place_un_systeme_de_veille_informationnelle.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Modélisez et implémentez une base de données relationnelle avec UML</h4>
-                                            <a href="./assets/certificats/modelisez_et_implementez_une_base_de_donnees_relationnelle_avec_uml.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Optimisez le référencement de votre site (SEO) en améliorant ses performances techniques</h4>
-                                            <a href="./assets/certificats/optimisez_le_referencement_de_votre_site_seo_en_ameliorant_ses_performances_techniques.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Participer à l'émergence de l'économie du partage</h4>
-                                            <a href="./assets/certificats/participer_a_lemergence_de_leconomie_du_partage.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Prenez en main Bootstrap</h4>
-                                            <a href="./assets/certificats/prenez_en_main_bootstrap.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Préparez-vous aux tests techniques pour devenir développeur</h4>
-                                            <a href="./assets/certificats/preparezvous_aux_tests_techniques_pour_devenir_developpeur.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Réalisez le cahier des charges d'un projet digital</h4>
-                                            <a href="./assets/certificats/realisez_le_cahier_des_charges_dun_projet_digital.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Réalisez un cahier des charges fonctionnel</h4>
-                                            <a href="./assets/certificats/realisez_un_cahier_des_charges_fonctionnel.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Repérer la résistance à la transformation digitale</h4>
-                                            <a href="./assets/certificats/reperer_la_resistance_a_la_transformation_digitale.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Réussir sa campagne d'e-mailing avec MailChimp</h4>
-                                            <a href="./assets/certificats/reussir_sa_campagne_demailing_avec_mailchimp.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Se mettre en posture de partage</h4>
-                                            <a href="./assets/certificats/se_mettre_en_posture_de_partage.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Simplifiez vos développements JavaScript avec jQuery</h4>
-                                            <a href="./assets/certificats/simplifiez_vos_developpements_javascript_avec_jquery.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Simplifiez vos réunions grâce au Doodling</h4>
-                                            <a href="./assets/certificats/simplifiez_vos_reunions_grace_au_doodling.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Simplifiez-vous le CSS avec Sass</h4>
-                                            <a href="./assets/certificats/simplifiezvous_le_css_avec_sass.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Surfez incognito sur Internet avec le réseau Tor</h4>
-                                            <a href="./assets/certificats/surfez_incognito_sur_internet_avec_le_reseau_tor.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Testez l'interface de votre site</h4>
-                                            <a href="./assets/certificats/testez_linterface_de_votre_site.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Testez vos idées avec le lean prototyping</h4>
-                                            <a href="./assets/certificats/testez_vos_idees_avec_le_lean_prototyping.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Utilisez des API REST dans vos projets web</h4>
-                                            <a href="./assets/certificats/utilisez_des_api_rest_dans_vos_projets_web.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Utilisez Git et GitHub pour vos projets de développement</h4>
-                                            <a href="./assets/certificats/utilisez_git_et_github_pour_vos_projets_de_developpement.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-md-4  o-grid__col-sm-6 d-none">
-                                    <div class="o-content">
-                                        <hr class="c-deco-line  t-primary-color-line" />
-                                        <div class="o-content__body">
-                                            <h4>Utilisez HTML5 pour l'interface utilisateur</h4>
-                                            <a href="./assets/certificats/utilisez_html5_pour_linterface_utilisateur.pdf" target="_blank">&#8212; Voir le certificat</a>
-                                        </div>
-                                    </div><!-- /o-content -->
-                                </div><!-- /o-grid__col -->
-                                <!-- LOAD MORE END -->
-
-                            </div><!-- /o-grid -->
-
-                            
-                            <div class="o-content" id="load_more">
-                            	<a href="#" class="btn btn-outline-warning">Voir tous les autres</a>
-                            </div>
-                        	
-
-                        </div><!-- /o-section__content -->
-
-                    </div><!-- /o-section__container -->
-                </div><!-- /o-container -->
-
-            </section><!-- /o-section -->
-
-
-
-            <!-- ################################ -->
-            <!-- ########### PORTFOLIO ########## -->
-            <!-- ################################ -->
-            
-            <section class="o-section  t-section  ">
-
-                <div class="o-section__header-bg  t-section__header"></div>
-                <div class="o-section__content-bg  t-section__content"></div>
-
-                <div class="o-container">
-                    <div class="o-section__container">
-
-                        <header class="o-section__header  t-section__header">
-                            <div class="o-content">
-                                <h2 class="o-section__heading">
-                                    Portfolio
-                                </h2>
-                                <div class="o-content__body  o-section__description">
-                                    L'oeil et l'esprit.
-                                </div>
-                            </div>
-                        </header><!-- /o-section__header -->
-
-                        <div class="o-section__content  t-section__content  o-section__full-bottom-space">
-                            
-                            <div class="o-grid  o-grid--gallery">
-
-                                <div class="o-grid__col-sm-6">
-                                    <a class="c-image-overlay  t-image-overlay  js-lightbox" href="assets/images/portfolio/portfrancs-full.jpg" data-lightbox-hidpi="" title="Port Francs Genève" data-lightbox-gallery="portfolio">
-                                        <img src="assets/images/portfolio/portfrancs-thumb.jpg" alt="Port Francs Genève">
-                                        <div class="c-image-overlay__content">
-                                            <h3>
-                                                Port Francs de Genève
-                                            </h3>
-                                            <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
-                                        </div>
-                                    </a>
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <a class="c-image-overlay  t-image-overlay  js-lightbox" href="assets/images/portfolio/k2luxury-full.jpg" data-lightbox-hidpi="" title="K2Luxury" data-lightbox-gallery="portfolio">
-                                        <img src="assets/images/portfolio/k2luxury-thumb.jpg" alt="K2Luxury">
-                                        <div class="c-image-overlay__content">
-                                            <h3>
-                                                K2Luxury
-                                            </h3>
-                                            <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
-                                        </div>
-                                    </a>
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <a class="c-image-overlay  t-image-overlay  js-lightbox" href="assets/images/portfolio/thomasjundt-full.jpg" data-lightbox-hidpi="" title="Thomas Jundt ingénieurs civils" data-lightbox-gallery="portfolio">
-                                        <img src="assets/images/portfolio/thomasjundt-thumb.jpg" alt="Thomas Jundt ingénieurs civils">
-                                        <div class="c-image-overlay__content">
-                                            <h3>
-                                                Thomas Jundt ingénieurs civils
-                                            </h3>
-                                            <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
-                                        </div>
-                                    </a>
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <a class="c-image-overlay  t-image-overlay  js-lightbox" href="assets/images/portfolio/eastside-full.jpg" data-lightbox-hidpi="" title="Eastside Shop Genève" data-lightbox-gallery="portfolio">
-                                        <img src="assets/images/portfolio/eastside-thumb.jpg" alt="Eastside Shop Genève">
-                                        <div class="c-image-overlay__content">
-                                            <h3>
-                                                Eastside Shop Genève
-                                            </h3>
-                                            <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
-                                        </div>
-                                    </a>
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <a class="c-image-overlay  t-image-overlay  js-lightbox" href="assets/images/portfolio/margauxmalya-full.jpg" data-lightbox-hidpi="" title="Margaux Malya" data-lightbox-gallery="portfolio">
-                                        <img src="assets/images/portfolio/margauxmalya-thumb.jpg" alt="Margaux Malya">
-                                        <div class="c-image-overlay__content">
-                                            <h3>
-                                                Margaux Malya
-                                            </h3>
-                                            <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
-                                        </div>
-                                    </a>
-                                </div><!-- /o-grid__col -->
-
-                                <div class="o-grid__col-sm-6">
-                                    <a class="c-image-overlay  t-image-overlay  js-lightbox" href="assets/images/portfolio/sensionet-full.jpg" data-lightbox-hidpi="" title="Sensionet" data-lightbox-gallery="portfolio">
-                                        <img src="assets/images/portfolio/sensionet-thumb.jpg" alt="Sensionet">
-                                        <div class="c-image-overlay__content">
-                                            <h3>
-                                                Sensionet
-                                            </h3>
-                                            <hr class="c-image-overlay__deco-line  t-image-overlay__deco-line" />
-                                        </div>
-                                    </a>
-                                </div><!-- /o-grid__col -->
-
-                            </div><!-- /o-grid -->
-
-                        </div><!-- /o-section__content -->
-
-                    </div><!-- /o-section__container -->
-                </div><!-- /o-container -->
-
-            </section><!-- /o-section -->
-
-
-
-
-            <!-- ################################ -->
-            <!-- ############ FOOTER ############ -->
-            <!-- ################################ -->
-            
-            <section class="o-section  t-section  o-section--footer">
-
-                <div class="o-section__header-bg  t-section__header"></div>
-                <div class="o-section__content-bg  t-section__content"></div>
-
-                <div class="o-container">
-                    <div class="o-section__container">
-
-                        <header class="o-section__header  t-section__header">
-                            <div class="o-content">
-                                <h2 class="o-section__heading">
-                                    Contact
-                                </h2>
-                                <div class="o-content__body  o-section__description">
-                                    Passez moi un coup de fil.
-                                </div>
-                            </div>
-                        </header><!-- /o-section__header -->
-
-                        <div class="o-section__content  t-section__content  ">
-                            
-                                <div class="c-footer__contact">
-                                    <div class="o-grid">
-
-                                    <div class="o-grid__col-md-3  o-grid__col-sm-6">
-                                        <div class="o-content">
-                                            <div class="o-content__body">
-                                                <h4>Origine</h4>
-                                                <address>
-                                                    Genève, CH
-                                                </address>
-                                            </div>
-                                        </div><!-- /o-content -->
-                                    </div><!-- /o-grid__col -->
-
-                                    <div class="o-grid__col-md-3  o-grid__col-sm-6">
-                                        <div class="o-content">
-                                            <div class="o-content__body">
-												<a href="tel:0033638931012" target="_blank" class="t-link-container">
-                                                    <h4>Téléphone</h4>
-                                                    <p>
-                                                    	<span class="t-link-container__item--blended">
-                                                        	+33 6 38 93 10 12
-                                                        </span>
-                                                    </p>
-                                                </a><!-- /o-link-container -->
-                                            </div>
-                                        </div><!-- /o-content -->
-                                    </div><!-- /o-grid__col -->
-
-                                    <div class="o-grid__col-md-3  o-grid__col-sm-6">
-                                        <div class="o-content">
-                                            <div class="o-content__body">
-                                                <a href="https://bstrautmann.com" target="_blank" class="t-link-container">
-                                                    <h4>Web</h4>
-                                                    <p>
-                                                        <span class="t-link-container__item--blended">
-                                                            bstrautmann.com
-                                                        </span>
-                                                    </p>
-                                                </a><!-- /o-link-container -->
-                                            </div>
-                                        </div><!-- /o-content -->
-                                    </div><!-- /o-grid__col -->
-
-                                    <div class="o-grid__col-md-3  o-grid__col-sm-6">
-                                        <div class="o-content">
-                                            <div class="o-content__body">
-                                                <a href="mailto:bosco.strautmann@gmail.com" target="_blank" class="t-link-container">
-                                                    <h4>Email</h4>
-                                                    <p>
-                                                        <span class="t-link-container__item--blended">
-                                                            bosco.strautmann@gmail.com
-                                                        </span>
-                                                    </p>
-                                                </a><!-- /o-link-container -->
-                                            </div>
-                                        </div><!-- /o-content -->
-                                    </div><!-- /o-grid__col -->
-
-                                </div><!-- /o-grid -->
-                                </div><!-- /c-footer__contact -->
-
-                                <hr class="c-footer__contact-divider" />
-
-                                <div class="o-content">
-                                    <div class="c-footer__bottom">
-                                        <div class="c-footer__brand">
-
-                                            <div class="c-brand">
-                                                <div class="o-content__body">
-                                                    <h2 class="c-brand__title  t-title">
-                                                        <span class="c-brand__sizer  c-brand__sizer--sm">
-                                                            <span class="a-footer  c-brand__first-word">
-                                                                Bosco
-                                                            </span>
-                                                            <span class="a-footer  c-brand__second-word  t-title__second-word">
-                                                                Strautmann
-                                                            </span>
-                                                        </span>
-                                                    </h2>
-                                                </div><!-- /o-content__body -->
-                                            </div><!-- /c-brand -->
-
-                                        </div><!-- /c-footer__brand -->
-
-                                        <ul class="c-footer__social-buttons  c-social-buttons  o-content__body">
-                                            <li class="a-footer">
-                                                <a href="https://www.facebook.com/boscostrautmann" target="_blank" class="c-social-button  t-social-button">
-                                                    <i class="fab  fa-lg  fa-facebook-f"></i>
-                                                </a>
-                                            </li>
-                                            <li class="a-footer">
-                                                <a href="https://twitter.com/boscostrautmann" target="_blank" class="c-social-button  t-social-button">
-                                                    <i class="fab  fa-lg  fa-twitter"></i>
-                                                </a>
-                                            </li>
-                                            <li class="a-footer">
-                                                <a href="https://www.linkedin.com/in/boscostrautmann/" target="_blank" class="c-social-button  t-social-button">
-                                                    <i class="fab  fa-lg  fa-linkedin"></i>
-                                                </a>
-                                            </li>
-                                        </ul><!-- /c-footer__social-buttons -->
-
-                                    </div><!-- /c-footer__bottom -->
-                                </div><!-- /o-content -->
-
-                        </div><!-- /o-section__content -->
-
-                    </div><!-- /o-section__container -->
-                </div><!-- /o-container -->
-
-            </section><!-- /o-section -->
-
-
-
-        </div><!-- /c-main-container -->
-
-    </body>
-
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <!-- CHAMP NOM -->
+              <div class="relative group">
+                <input type="text" id="name" name="name" required placeholder=" " 
+                       class="w-full bg-transparent border-b grid-line py-3 text-title focus:outline-none focus:border-emerald-500 transition-colors peer">
+                <label for="name" 
+                       class="absolute left-0 top-3 text-subtle pointer-events-none transition-all duration-200 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-emerald-500 peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs">
+                  VOTRE NOM / ENTREPRISE *
+                </label>
+              </div>
+
+              <!-- CHAMP EMAIL -->
+              <div class="relative group">
+                <input type="email" id="email" name="email" required placeholder=" " 
+                       class="w-full bg-transparent border-b grid-line py-3 text-title focus:outline-none focus:border-emerald-500 transition-colors peer">
+                <label for="email" 
+                       class="absolute left-0 top-3 text-subtle pointer-events-none transition-all duration-200 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-emerald-500 peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs">
+                  VOTRE EMAIL *
+                </label>
+              </div>
+            </div>
+
+            <!-- CHAMP SUJET -->
+            <div class="relative group">
+              <input type="text" id="subject" name="subject" placeholder=" " 
+                     class="w-full bg-transparent border-b grid-line py-3 text-title focus:outline-none focus:border-emerald-500 transition-colors peer">
+              <label for="subject" 
+                     class="absolute left-0 top-3 text-subtle pointer-events-none transition-all duration-200 peer-focus:-top-4 peer-focus:text-xs peer-focus:text-emerald-500 peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs truncate">
+                SUJET (Ex: Opportunité IT ou un Café...)
+              </label>
+            </div>
+
+            <!-- CHAMP MESSAGE -->
+            <div class="relative group pt-4">
+              <textarea id="message" name="message" rows="3" required placeholder=" " 
+                        class="w-full bg-transparent border-b grid-line py-3 text-title focus:outline-none focus:border-emerald-500 transition-colors peer resize-none"></textarea>
+              <label for="message" 
+                     class="absolute left-0 top-7 text-subtle pointer-events-none transition-all duration-200 peer-focus:top-0 peer-focus:text-xs peer-focus:text-emerald-500 peer-[:not(:placeholder-shown)]:top-0 peer-[:not(:placeholder-shown)]:text-xs">
+                VOTRE MESSAGE *
+              </label>
+            </div>
+
+            <!-- BOUTON SUBMIT INTERACTIF -->
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <button type="submit" id="submit-btn" 
+                      class="w-full sm:w-auto glass-card border border-emerald-500/40 text-emerald-500 hover:bg-emerald-500 hover:text-black font-bold px-8 py-4 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 group">
+                <span id="btn-text">TRANSMETTRE LE PAQUET</span>
+                <span class="group-hover:translate-x-1 transition-transform">⚡</span>
+              </button>
+
+              <div id="form-feedback" class="text-xs text-subtle hidden font-bold"></div>
+            </div>
+
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="p-8 font-mono text-xs text-subtle flex flex-col md:flex-row justify-between items-center gap-4">
+      <div>
+        <span class="text-emerald-500 font-bold">BOSCO STRAUTMANN</span> — DISPONIBLE IMMÉDIATEMENT
+      </div>
+      <div class="flex flex-wrap gap-6 justify-center">
+        <a href="https://www.linkedin.com/in/boscostrautmann" target="_blank" class="hover:text-emerald-500 transition font-bold text-title">LINKEDIN</a>
+        <a href="mailto:bosco@strautmann.me" class="hover:text-emerald-500 transition font-bold text-title">BOSCO@STRAUTMANN.ME</a>
+        <a href="tel:+33638931012" class="hover:text-emerald-500 transition">+33 (0)6 38 93 10 12</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>

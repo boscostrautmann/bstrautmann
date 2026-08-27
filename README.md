@@ -1,2 +1,0 @@
-# bstrautmann
- Personal Website
